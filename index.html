@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="top">
+        <h3 id="name">Build Great Habits</h3>
+        <button id="AddHabit">➕ Add Habit</button>
+    </header>
+    <div id="overlay">
+    <form id="habitForm">
+        <p>
+            <label for="habit">Habit Name</label>
+            <input type="text" name="habit" id="habit" required>
+        </p>
+        <p>
+            <label for="time">Time of the day</label>
+            <input type="time" name="time" id="time" required>
+        </p>
+        <div id="container1">
+            <input type="submit" value="Add Habit" id="submit">
+            <button id="cancel8tn" type="button">Cancel</button>
+        </div>
+    </form>
+    </div>
+    <div class="main-layout">
+        <div class="habit-groups">
+            <div class="habit-section">
+                <h3>Morning</h3>
+                <ul id="morningList"></ul>
+            </div>
+            <div class="habit-section">
+                <h3>Afternoon</h3>
+                <ul id="afternoonList"></ul>
+            </div>
+            <div class="habit-section">
+                <h3>Evening</h3>
+                <ul id="eveningList"></ul>
+            </div>
+            <div class="habit-section">
+                <h3>Night</h3>
+                <ul id="nightList"></ul>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="wrapper">
+            <div class="progress-container">
+                <svg class="progress-ring" width="400" height="400">
+                <circle class="progress-ring__bg" stroke-width="15" r="130" cx="200" cy="200"/>
+                <circle class="progress-ring__circle" stroke-width="15" r="130" cx="200" cy="200"/>
+                </svg>
+                <div class="progress-text" id="progress-text">0%</div>
+            </div>
+            <div id="calendar"></div>
+            </div>
+            <div id="heatmap-container">
+                <h3>Habit Heatmap</h3>
+                <div id="heatmap"></div>
+            </div>
+        </div>
+    </div>
+    <script src="habit-tracker.js"></script>
+</body>
+</html>

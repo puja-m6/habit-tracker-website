@@ -279,3 +279,36 @@ body
   border-width: 0 2px 2px 0;
   transform: translate(-50%, -50%) rotate(45deg);
 }
+
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .habit-groups {
+    width: 100%; 
+    grid-template-columns: 1fr;
+  }
+
+  .progress-container {
+    width: 90%;  
+    height: auto;
+    margin: 0 auto;
+  }
+
+  #heatmap-container {
+    width: 100%;
+    overflow-x: scroll;
+  }
+  #top {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  #AddHabit {
+    position: static;
+    margin-top: 10px;
+  }
+}

@@ -282,8 +282,9 @@ body
 
 @media (max-width: 768px) {
   .main-layout {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: column; 
+    gap: 15px;
+    align-items: center;     
   }
 
   .habit-groups {
@@ -292,8 +293,10 @@ body
   }
 
   .progress-container {
-    width: 90%;  
-    height: auto;
+    width: 100%;       
+    max-width: 350px;  
+    height: auto;      
+    aspect-ratio: 1/1; 
     margin: 0 auto;
   }
 
@@ -301,6 +304,7 @@ body
     width: 100%;
     overflow-x: scroll;
   }
+
   #top {
     flex-direction: column;
     height: auto;
@@ -311,4 +315,34 @@ body
     position: static;
     margin-top: 10px;
   }
+
+  #habitForm {
+    width: 90%;         
+    max-width: 300px;   
+    padding: 15px;
+  }
+
+    .progress-ring {
+    width: 100%;        
+    max-width: 250px;     
+    height: auto;
+  }
+
+  .progress-ring__bg,
+  .progress-ring__circle {
+    r: 100 !important;    
+    cx: 125 !important;
+    cy: 125 !important;
+  }
+
+  .progress-text {
+    font-size: 1.5rem;  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
 }
+
+  
